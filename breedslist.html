@@ -3,7 +3,19 @@ layout: default
 title: "List of Breeds"
 ---
 
-<header class="post-header">
+<header class="page-header">
     <h1>List of Breeds</h1>
     <p class="subtitle">Browse every breed we have to offer!</p>
 </header>
+
+<section class="flex-container">
+    {% for item in site.data.index_data.breedlist %}
+    <article class="card">
+        {% if item.badge %}
+        <span class="card-badge">{{ item.badge }}</span>
+        {% endif %}
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+    </article>
+    {% endfor %}
+</section>

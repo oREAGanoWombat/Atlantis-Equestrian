@@ -216,6 +216,13 @@ body {
     margin-top: 2rem;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1.5rem;
+}
+
 .card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
