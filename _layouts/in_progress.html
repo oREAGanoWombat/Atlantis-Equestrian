@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="in-progress-container">
+    <div class="in-progress-card">
+        <div class="in-progress-badge">Work in Progress</div>
+
+        <h1>{{ page.title }}</h1>
+
+        <p class="in-progress-message">
+            {% if page.description %}
+            {{ page.description }}
+            {% else %}
+            This division is currently being compiled and updated. Please check back soon for complete pedigree records and registry details!
+            {% endif %}
+        </p>
+
+        <!-- Optional Page Content if you want to add notes or partial content -->
+        {% if content != "" %}
+        <div class="in-progress-notes">
+            {{ content }}
+        </div>
+        {% endif %}
+
+        <div class="in-progress-actions">
+            <a href="{{ '/' | relative_url }}" class="btn-primary">&larr; Return to Home</a>
+        </div>
+    </div>
+</div>
