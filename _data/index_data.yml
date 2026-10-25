@@ -4,7 +4,7 @@ welcome_text_2: "Established in 2014, Atlantis Equestrian is a member of IPABRA.
 
 breedlist:
   - title: "Stock Breeds"
-    description: "TBD"
+    description: "Athletic, powerful, and cow-savvy horses bred for quick bursts of speed, agility, and western performance."
     badge: "Coming Soon"
     breeds:
       - title: "Sprint-Bred Quarter Horses"
@@ -16,7 +16,7 @@ breedlist:
       - title: "Paint Horses"
         link: "/breeds/stock/paint-horse.html"
   - title: "Sport Breeds"
-    description: "TBD"
+    description: "Elite sporthorses and European warmbloods refined for show jumping, dressage, eventing, and track racing."
     badge: "Coming Soon"
     breeds:
       - title: "Thoroughbreds"
@@ -44,7 +44,7 @@ breedlist:
       - title: "Westphalians"
         link: "/breeds/sport/westphalian.html"
   - title: "Light Breeds"
-    description: "TBD"
+    description: "Refined, enduring, and spirited light horse lines renowned for stamina, elegance, and historic foundation ancestry."
     badge: "Coming Soon"
     breeds:
       - title: "Arabians"
@@ -56,7 +56,7 @@ breedlist:
       - title: "Morgans"
         link: "/breeds/light/morgan.html"
   - title: "Spanish & Iberian Breeds"
-    description: "TBD"
+    description: "Noble, dramatic, and expressive Iberian bloodlines built for classical collection, high action, and presence."
     badge: "Coming Soon"
     breeds:
       - title: "Andalusians (PRE)"
@@ -64,7 +64,7 @@ breedlist:
       - title: "Lipizzaners"
         link: "/breeds/spanish/lipizzan.html"
   - title: "Carriage & Gaited Breeds"
-    description: "TBD"
+    description: "Animated show horses and smooth-moving gaited breeds celebrated for expressive style, ambling gaits, and harness excellence."
     badge: "Coming Soon"
     breeds:
       - title: "American Saddlebreds"
@@ -76,7 +76,7 @@ breedlist:
       - title: "Tennessee Walking Horses"
         link: "/breeds/carriage-gaited/twh.html"
   - title: "Pony Breeds"
-    description: "TBD"
+    description: "Hardy, versatile, and expressive ponies spanning cob types, sport and riding ponies, and native island breeds."
     badge: "Coming Soon"
     breeds:
       - title: "Chincoteague Ponies"
@@ -100,7 +100,7 @@ breedlist:
       - title: "Welsh Cobs (D)"
         link: "/breeds/pony/welsh-d.html"
   - title: "Draft Breeds & Longears"
-    description: "TBD"
+    description: "Heavy draft horses and longears prized for grand stature, feathering, immense power, and calm temperaments."
     badge: "Coming Soon"
     breeds:
       - title: "Clydesdales"
@@ -114,7 +114,7 @@ breedlist:
       - title: "Percherons"
         link: "/breeds/draft/percheron.html"
   - title: "Other Breeds"
-    description: "TBD"
+    description: "Specialized registries and free-roaming bloodlines, including miniature horses and wild American Mustangs."
     badge: "Coming Soon"
     breeds:
       - title: "Miniature Horses"
