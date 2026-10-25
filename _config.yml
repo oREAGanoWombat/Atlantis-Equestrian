@@ -1,7 +1,7 @@
 title: "Atlantis Equestrian"
 description: "Model Horse Directory & Pedigree Database"
-baseurl: "/Atlantis-Equestrian"
-url: "https://oreaganowombat.github.io"
+baseurl: ""
+url: "https://oreaganowombat.github.io/Atlantis-Equestrian"
 
 # Disable built-in theme overrides
 theme: null
