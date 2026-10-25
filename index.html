@@ -8,15 +8,3 @@ title: "Home"
     <p class="subtitle">{{ site.data.index_data.welcome_text_1 }}</p>
     <p class="subtitle">{{ site.data.index_data.welcome_text_2 }}</p>
 </header>
-
-<section class="grid-container">
-    {% for item in site.data.index_data.sections %}
-    <article class="card">
-        {% if item.badge %}
-        <span class="card-badge">{{ item.badge }}</span>
-        {% endif %}
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-    </article>
-    {% endfor %}
-</section>
