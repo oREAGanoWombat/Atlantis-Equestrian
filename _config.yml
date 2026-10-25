@@ -1,7 +1,7 @@
 title: "Atlantis Equestrian"
 description: "Model Horse Directory & Pedigree Database"
-baseurl: "" # Leave empty for root user.github.io repo, or "/repo-name" for project repos
-url: ""
+baseurl: ""
+url: "https://oreaganowombat.github.io/AtlantisEquestrian/"
 
 # Disable built-in theme overrides
 theme: null
