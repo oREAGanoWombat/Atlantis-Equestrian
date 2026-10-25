@@ -483,8 +483,8 @@ body {
 
 /* Horse Grid & Card Layout */
 .breed-roster-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
