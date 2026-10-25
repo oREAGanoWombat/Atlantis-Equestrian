@@ -10,12 +10,26 @@ title: "List of Breeds"
 
 <section class="flex-container">
     {% for item in site.data.index_data.breedlist %}
-    <article class="card">
+    <article class="card breed-card">
         {% if item.badge %}
         <span class="card-badge">{{ item.badge }}</span>
         {% endif %}
+
         <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
+
+        {% if item.description and item.description != 'TBD' %}
+        <p class="card-description">{{ item.description }}</p>
+        {% endif %}
+
+        {% if item.breeds %}
+        <div class="breed-buttons-flex">
+            {% for breed in item.breeds %}
+            <a href="{{ breed.link | relative_url }}" class="breed-btn">
+                {{ breed.title }}
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
     </article>
     {% endfor %}
 </section>
