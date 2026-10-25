@@ -193,7 +193,17 @@ body {
     margin-left: var(--sidebar-width);
     flex: 1;
     padding: 3rem 4rem;
-    max-width: 1200px;
+}
+
+.main-content > header,
+.main-content > section,
+.main-content > footer,
+.main-content > div,
+.main-content > article {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .page-header {

@@ -3,7 +3,7 @@ layout: default
 ---
 
 {{ content }}
-
+<div class="main-content>"
 {% assign breed_code = page.prefix %}
 {% assign all_horses = site.data.master_list %}
 
@@ -14,7 +14,7 @@ layout: default
 
 {% for horse in all_horses %}
 {% assign horse_str = horse | inspect %}
-{% if horse_str contains breed_code or horse.Breed == 'QH-Sprint' %}
+{% if horse_str contains breed_code %}
 {% assign sex = horse.Sex | downcase | strip %}
 {% assign status = horse.Status | downcase | strip %}
 
@@ -79,3 +79,4 @@ layout: default
     {% endfor %}
 </div>
 {% endif %}
+</div>
