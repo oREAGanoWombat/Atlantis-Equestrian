@@ -243,7 +243,7 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-main);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 500;
     padding: 0.25rem 0.6rem;
     border-radius: 12px;
     margin-bottom: 0.75rem;
