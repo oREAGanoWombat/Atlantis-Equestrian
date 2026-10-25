@@ -1,8 +1,10 @@
 - name: "Home"
   link: "/"
 - name: "Sire / Dam List"
-  link: "/sire-dam-list.html"
+  sublinks:
+    - name: "Request a Breeding"
+      link: "/request_breeding.html"
+    - name: "List of Breeds"
+      link: "/breedslist.html"
 - name: "Reference"
   link: "/reference.html"
-  sublinks:
-    - name:

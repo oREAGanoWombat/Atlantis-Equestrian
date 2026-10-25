@@ -2,11 +2,19 @@ welcome_title: "Welcome to Atlantis Equestrian"
 welcome_text_1: "A sire/dam list and pedigree directory for model horse breeds."
 welcome_text_2: "Established in 2014, Atlantis Equestrian is a member of IPABRA."
 
-sections:
-  - title: "Draft & Heavy Breeds"
-    description: "Featuring Percheron, Clydesdale, North American Spotted Draft, and Irish Draught."
-    badge: "Updated"
-    link: "#"
+breedlist:
+  - title: "Stock Breeds"
+    description: "TBD"
+    badge: "Incomplete"
+    breeds:
+      - title: "Sprint-Bred Quarter Horses"
+        link: "/breeds/stock/qh-sprint.html"
+      - title: "Working-Bred Quarter Horses"
+        link: "/breeds/stock/qh-working.html"
+      - title: "Appaloosas"
+        link: "/breeds/stock/appaloosa.html"
+      - title: "Paint Horses"
+        link: "breeds/stock/paint-horse.html"
 
   - title: "Gaited & Light Breeds"
     description: "Featuring Tennessee Walking Horse, American Saddlebred, and Icelandic Horse."

@@ -19,10 +19,25 @@
         <nav class="sidebar-nav">
             <ul>
                 {% for item in site.data.navigation %}
-                <li>
-                    <a href="{{ item.link | relative_url }}" class="{% if page.url == item.link %}active{% endif %}">
-                        {{ item.name }}
+                <li class="nav-item {% if item.sublinks %}has-dropdown{% endif %}">
+                    <a href="{{ item.link | relative_url }}" class="nav-link {% if page.url == item.link %}active{% endif %}">
+                        <span>{{ item.name }}</span>
+                        {% if item.sublinks %}
+                        <span class="dropdown-arrow">▾</span>
+                        {% endif %}
                     </a>
+
+                    {% if item.sublinks %}
+                    <ul class="dropdown-menu">
+                        {% for subitem in item.sublinks %}
+                        <li>
+                            <a href="{{ subitem.link | relative_url }}" class="{% if page.url == subitem.link %}active{% endif %}">
+                                <span>{{ subitem.name }}</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
