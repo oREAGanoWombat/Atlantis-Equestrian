@@ -12,7 +12,7 @@ title: "List of Breeds"
     {% for item in site.data.index_data.breedlist %}
     <article class="card breed-card">
         {% if item.badge %}
-        <span class="card-badge">{{ item.badge }}</span>
+        <span class="card-badge badge-{{ item.badge | slugify }}">{{ item.badge }}</span>
         {% endif %}
 
         <h3>{{ item.title }}</h3>

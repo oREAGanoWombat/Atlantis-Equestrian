@@ -5,8 +5,11 @@
     --text-main: #2c2c2c;
     --bg-primary: #f9fbff;
     --primary-color: #e494b0;
+    --primary-dark: #881337
     --secondary-color: #a2d9c7;
+    --secondary-dark: #064e3b;
     --accent-color: #739ac6;
+    --accent-dark: #1e3a8a;
 
     /* Derived Structural Colors */
     --bg-card: #ffffff;
@@ -249,6 +252,27 @@ body {
     margin-bottom: 0.75rem;
 }
 
+/* Incomplete / Work In Progress (Soft Rose/Pink) */
+.card-badge.badge-incomplete {
+    background-color: var(--primary-color);
+    color: var(--primary-dark);
+}
+
+/* Recently Updated / Active / New Entries (Mint Green) */
+.card-badge.badge-recently-updated,
+.card-badge.badge-updated,
+.card-badge.badge-active {
+    background-color: var(--secondary-color, #a2d9c7);
+    color: var(--secondary-dark);
+}
+
+/* Coming Soon / Planned (Soft Blue/Periwinkle) */
+.card-badge.badge-coming-soon,
+.card-badge.badge-new-entries {
+    background-color: var(--accent-color);
+    color: var(--accent-dark);
+}
+
 .card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
@@ -338,8 +362,9 @@ body {
 }
 
 .in-progress-actions {
-    display: flex;
+    display: block;
     justify-content: center;
+    gap: 1rem;
 }
 
 .btn-primary {
