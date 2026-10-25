@@ -1,5 +1,6 @@
 welcome_title: "Welcome to Atlantis Equestrian"
-welcome_text: "A digital registry and pedigree directory for model horse breeds."
+welcome_text_1: "A sire/dam list and pedigree directory for model horse breeds."
+welcome_text_2: "Established in 2014, Atlantis Equestrian is a member of IPABRA."
 
 sections:
   - title: "Draft & Heavy Breeds"
