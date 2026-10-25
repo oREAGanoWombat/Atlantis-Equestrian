@@ -1,0 +1,18 @@
+welcome_title: "Welcome to Atlantis Equestrian"
+welcome_text: "A digital registry and pedigree directory for model horse breeds."
+
+sections:
+  - title: "Draft & Heavy Breeds"
+    description: "Featuring Percheron, Clydesdale, North American Spotted Draft, and Irish Draught."
+    badge: "Updated"
+    link: "#"
+
+  - title: "Gaited & Light Breeds"
+    description: "Featuring Tennessee Walking Horse, American Saddlebred, and Icelandic Horse."
+    badge: "Active"
+    link: "#"
+
+  - title: "Ponies & Miniature Horses"
+    description: "Featuring Welsh Sections A–D, Stock Ponies, Shetlands, and Minis."
+    badge: "New Entries"
+    link: "#"

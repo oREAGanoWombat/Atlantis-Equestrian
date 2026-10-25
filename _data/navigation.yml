@@ -1,0 +1,8 @@
+- name: "Home"
+  link: "/"
+- name: "Sire / Dam List"
+  link: "/sire-dam-list.html"
+- name: "The Board"
+  link: "/the-board.html"
+- name: "Reference"
+  link: "/reference.html"
