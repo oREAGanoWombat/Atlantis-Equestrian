@@ -1,0 +1,55 @@
+<article class="card horse-card">
+    <!-- Photo Container (Only displays if PhotoLink is specified in the CSV) -->
+    {% if include.horse.PhotoLink and include.horse.PhotoLink != "" %}
+    <div class="horse-image-container">
+        <img src="{{ include.horse.PhotoLink | relative_url }}"
+             alt="{{ include.horse.Name }}"
+             onerror="this.parentElement.style.display='none';" />
+    </div>
+    {% endif %}
+
+    <div class="horse-info">
+        <h3 class="horse-title">{{ include.horse.Name }}</h3>
+
+        <p class="horse-meta">
+            <strong>{{ include.horse.YOB }}</strong> {{ include.horse.Color }}
+            {% if include.horse.Genetics and include.horse.Genetics != "" %}({{ include.horse.Genetics }}){% endif %}
+            {{ include.horse.Sex }}
+        </p>
+
+        <!-- Lineage Details -->
+        <p class="horse-pedigree">
+            {% if include.horse.Sire and include.horse.Sire != "" %}
+            <strong>Sire:</strong> {{ include.horse.Sire }}
+            {% endif %}
+            {% if include.horse.Dam and include.horse.Dam != "" %}
+            <br><strong>Dam:</strong> {{ include.horse.Dam }}
+            {% endif %}
+            {% if include.horse.Damsire and include.horse.Damsire != "" %}
+            (by {{ include.horse.Damsire }})
+            {% endif %}
+        </p>
+
+        <!-- Additional Details -->
+        <ul class="horse-details-list">
+            {% if include.horse.Breeder and include.horse.Breeder != "" %}
+            <li><strong>Breeder:</strong> {{ include.horse.Breeder }}</li>
+            {% endif %}
+            {% if include.horse['Model Info'] and include.horse['Model Info'] != "" %}
+            <li><strong>Model:</strong> {{ include.horse['Model Info'] }}</li>
+            {% endif %}
+            {% if include.horse['Show-Comp-Record'] and include.horse['Show-Comp-Record'] != "" %}
+            <li><strong>Record:</strong> {{ include.horse['Show-Comp-Record'] }}</li>
+            {% endif %}
+        </ul>
+
+        <!-- Pedigree Action Button (Only displays if PedigreeLink is specified in the CSV) -->
+        {% if include.horse.PedigreeLink and include.horse.PedigreeLink != "" %}
+        <div class="card-actions">
+            <a href="{{ include.horse.PedigreeLink | relative_url }}" class="btn-secondary">
+                PEDIGREE
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</article>

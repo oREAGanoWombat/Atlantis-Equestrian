@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign breed_code = page.prefix %}
+{% assign all_horses = site.data.master_list %}
+
+{% assign stallions = "" | split: "" %}
+{% assign pensioned_stallions = "" | split: "" %}
+{% assign mares = "" | split: "" %}
+{% assign pensioned_mares = "" | split: "" %}
+
+{% for horse in all_horses %}
+{% assign horse_str = horse | inspect %}
+{% if horse_str contains breed_code or horse.Breed == 'QH-Sprint' %}
+{% assign sex = horse.Sex | downcase | strip %}
+{% assign status = horse.Status | downcase | strip %}
+
+{% if sex == 'stallion' or sex == 'colt' or sex == 'gelding' %}
+{% if status contains 'pensioned' %}
+{% assign pensioned_stallions = pensioned_stallions | push: horse %}
+{% else %}
+{% assign stallions = stallions | push: horse %}
+{% endif %}
+{% elsif sex == 'mare' or sex == 'filly' %}
+{% if status contains 'pensioned' %}
+{% assign pensioned_mares = pensioned_mares | push: horse %}
+{% else %}
+{% assign mares = mares | push: horse %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+<!-- Sort category arrays by birth year (YOB) -->
+{% assign stallions = stallions | sort: "YOB" %}
+{% assign pensioned_stallions = pensioned_stallions | sort: "YOB" %}
+{% assign mares = mares | sort: "YOB" %}
+{% assign pensioned_mares = pensioned_mares | sort: "YOB" %}
+
+<!-- Active Stallions -->
+{% if stallions.size > 0 %}
+<h2 class="category-heading">STALLIONS</h2>
+<div class="breed-roster-grid">
+    {% for horse in stallions %}
+    {% include horse_card.html horse=horse %}
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- Pensioned Stallions -->
+{% if pensioned_stallions.size > 0 %}
+<h2 class="category-heading">Pensioned Stallions</h2>
+<div class="breed-roster-grid">
+    {% for horse in pensioned_stallions %}
+    {% include horse_card.html horse=horse %}
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- Active Mares -->
+{% if mares.size > 0 %}
+<h2 class="category-heading">MARES</h2>
+<div class="breed-roster-grid">
+    {% for horse in mares %}
+    {% include horse_card.html horse=horse %}
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- Pensioned Mares -->
+{% if pensioned_mares.size > 0 %}
+<h2 class="category-heading">Pensioned Mares</h2>
+<div class="breed-roster-grid">
+    {% for horse in pensioned_mares %}
+    {% include horse_card.html horse=horse %}
+    {% endfor %}
+</div>
+{% endif %}
