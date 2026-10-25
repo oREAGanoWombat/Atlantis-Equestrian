@@ -3,6 +3,7 @@ layout: default
 ---
 
 {{ content }}
+
 <div class="main-content>"
 {% assign breed_code = page.prefix %}
 {% assign all_horses = site.data.master_list %}
@@ -13,6 +14,9 @@ layout: default
 {% assign pensioned_mares = "" | split: "" %}
 
 {% for horse in all_horses %}
+<!-- Filter: Only process horses marked as 'live' in WebStatus -->
+{% assign web_status = horse.WebStatus | downcase | strip %}
+{% if web_status == 'live' %}
 {% assign horse_str = horse | inspect %}
 {% if horse_str contains breed_code %}
 {% assign sex = horse.Sex | downcase | strip %}
@@ -29,6 +33,7 @@ layout: default
 {% assign pensioned_mares = pensioned_mares | push: horse %}
 {% else %}
 {% assign mares = mares | push: horse %}
+{% endif %}
 {% endif %}
 {% endif %}
 {% endif %}
@@ -79,4 +84,5 @@ layout: default
     {% endfor %}
 </div>
 {% endif %}
+
 </div>

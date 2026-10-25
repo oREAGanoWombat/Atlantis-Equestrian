@@ -41,6 +41,8 @@ breedlist:
         link: "/breeds/sport/oldenburg.html"
       - title: "Selle Francais"
         link: "/breeds/sport/selle-francais.html"
+      - title: "Trakehner"
+        link: "/breeds/sport/trakehner.html"
       - title: "Westphalians"
         link: "/breeds/sport/westphalian.html"
   - title: "Light Breeds"
