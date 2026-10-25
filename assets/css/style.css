@@ -441,3 +441,7 @@ body {
     font-weight: 700;
     color: var(--primary-dark);
 }
+
+.github-link {
+    color: var(--primary-dark);
+}
