@@ -443,7 +443,7 @@ body {
 }
 
 .github-link {
-    color: var(--primary-dark);
+    color: var(--text-muted);
 }
 
 /* Category Section Headings */
